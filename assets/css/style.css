@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid red;*/
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(109, 109, 109);
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  color: blue;
+  width: 70%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 50%;
+  border: 1px solid blue;
+  background-color: white;
+  border-radius: 5px;
+}
+
+section h2 {
+  background-color: blue;
+  color: white;
+}
+
+.formations {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  order: 1;
+}
+
+.formation {
+  display: flex;
+  margin-top: 10px;
+}
+
+.formation div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.exp {
+  background-color: turquoise;
+  display: flex;
+}
+
+.exp p:first-child {
+  min-width: 50%;
+  padding-right: 1rem;
+}
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  order: 2;
+}
+
+.experiences .deroulant {
+  list-style: none;
+}
+
+.experiences ul .sous {
+  margin-left: 5rem;
+}
+
+hr {
+  display: none;
+}
+
+.civil {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  order: 0;
+}
+
+.civil h2 {
+  background-color: blue;
+  color: white;
+}
+
+address {
+  display: flex;
+  flex-flow: column;
+  margin-top: 10px;
+}
+
+address a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.divers {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  margin-top: 10px;
+  order: 3;
+}
+
+.divers ul {
+  margin-top: 10px;
+}
+
+.divers div {
+  background-color: white;
+  color: blue;
+}
+
+.divers li .deroulant {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.arrow-top {
+  transform: rotate(180deg);
+}
+
+.deroulant>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sous {
+  display: none;
+}
+
+/*Styles spécifiques pour les grands écrans type écrans d'ordinateur*/
+@media (min-width: 980px) {
+
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 0;
+  }
+
+  header h1 {
+    font-size: 6rem;
+    width: 75%;
+    margin: auto 0;
+  }
+
+  .experiences ul {
+    list-style: inside;
+  }
+
+  header {
+    display: flex;
+    margin: auto;
+    margin-top: 0;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+  }
+
+  header img {
+    margin: 0;
+    height: max-content;
+    position: static;
+    top: 0;
+    right: 0;
+    width: 25%;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0px 2px white;
+    background-color: blue;
+    border-radius: 5px;
+  }
+
+  .formations {
+    display: flex;
+    flex-flow: column;
+    height: -moz-fit-content;
+    width: 73%;
+    order: -4;
+    margin-right: 15px;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .experiences {
+    display: flex;
+    flex-flow: column;
+    min-width: 73%;
+    margin-right: 15px;
+  }
+
+  .civil {
+    background-color: blue;
+    color: white;
+    width: 25%;
+    display: flex;
+    flex-flow: column;
+    order: -2;
+    padding: auto;
+    margin-top: 0;
+  }
+
+  hr {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .divers {
+    display: flex;
+    flex-flow: column;
+    margin-top: 0;
+    width: 25%;
+  }
+
+  address a {
+    text-decoration: initial;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .sous {
+    display: block;
+  }
+}
